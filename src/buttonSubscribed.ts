@@ -1,11 +1,11 @@
 import * as PIXI from 'pixi.js'
 export type TButton = {
-    onDown: () => void;
-    onOver: () => void;
-    onOut: () => void;
-    onUp: () => void;
-    onUpOutside: () => void;
-};
+    onDown: () => void
+    onOver: () => void
+    onOut: () => void
+    onUp: () => void
+    onUpOutside: () => void
+}
 export function buttonSubscribed<K extends { new(...args: any): PIXI.Container & TButton }>(source: K) {
     return class extends source {
         constructor(...args: any[]) {
