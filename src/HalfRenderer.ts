@@ -1,6 +1,10 @@
 import * as PIXI from 'pixi.js'
 export default class HalfRenderer {
-    constructor(private readonly runner: PIXI.Runner, private readonly graphics: PIXI.Graphics, private readonly params: { x: number, y: number, width: number, height: number }) {
+    constructor(
+        private readonly runner: PIXI.Runner,
+        private readonly graphics: PIXI.Graphics,
+        private readonly params: { x: number, y: number, width: number, height: number }
+    ) {
         runner.add(this)
         this.runner = runner
         this.graphics = graphics

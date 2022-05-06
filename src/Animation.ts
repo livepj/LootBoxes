@@ -11,7 +11,7 @@ export default class Animation extends PIXI.Container {
     }
     async showBonusWin() {
         this.background.visible = true
-        this.showText("BONUS WIN")
+        this.showText('BONUS WIN')
         await this.drawHalfs()
         this.background.visible = false
         this.hideText()

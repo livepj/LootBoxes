@@ -23,7 +23,7 @@ export default class GraphicsButton extends PIXI.Graphics {
     }
     onUp() {
         this.buttonState = State.Over
-        this.emit("buttonClick")
+        this.emit('buttonClick')
     }
     onUpOutside() {
         this.buttonState = State.Normal

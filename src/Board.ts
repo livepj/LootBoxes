@@ -12,7 +12,8 @@ export default class Board extends PIXI.Container {
         this.drawPlay()
     }
     private drawChests() {
-        let { width, height } = config
+        let { height } = config
+        const { width } = config
         height -= 200
         const wPad = width / 3
         const hPad = height / 4

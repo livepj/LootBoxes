@@ -3,14 +3,14 @@ module.exports = {
 		'browser': true,
 		'es2021': true
 	},
-	'extends': 'eslint:recommended',
+	'extends': ["plugin:@typescript-eslint/recommended"],
 	'parser': '@typescript-eslint/parser',
 	'parserOptions': {
 		'ecmaVersion': 12,
 		'sourceType': 'module'
 	},
 	'plugins': [
-	  '@typescript-eslint',
+		'@typescript-eslint',
 	],
 	'rules': {
 		'linebreak-style': [
@@ -29,7 +29,7 @@ module.exports = {
 		"max-len": ["error", { "code": 160 }],
 		'padded-blocks': ["error", "never"],
 		'object-curly-spacing': ["error", "always"],
-		'no-magic-numbers': "ignore",
+		'no-magic-numbers': 0,
 		'space-before-function-paren': ["error", "never"]
 	},
 	'ignorePatterns': ['.eslintrc.js', 'webpack.config.js']

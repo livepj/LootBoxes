@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as PIXI from 'pixi.js'
 export type TButton = {
     onDown: () => void
@@ -6,7 +7,7 @@ export type TButton = {
     onUp: () => void
     onUpOutside: () => void
 }
-export function buttonSubscribed<K extends { new(...args: any): PIXI.Container & TButton }>(source: K) {
+export function buttonSubscribed<K extends { new(...args: any[]): PIXI.Container & TButton }>(source: K) {
     return class extends source {
         constructor(...args: any[]) {
             super(...args)
