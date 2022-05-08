@@ -18,12 +18,9 @@ document.body.appendChild(app.view)
 const board = app.stage.addChild(new Board())
 const frontLayer = app.stage.addChild(new Animation())
 
-board.addListener('bonusWin', async () => {
+board.addListener('bonusWin', async() => {
     await frontLayer.showBonusWin()
 })
-
-    ; (window as any).frontLayer = frontLayer
-    ; (window as any).board = board
 
 export function delay(time: number) {
     const ticker = PIXI.Ticker.shared
